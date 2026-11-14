@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="PS3 STORE GAMES - catálogo e central de informações para PlayStation 3.">
+<title>PS3 STORE GAMES</title>
+<style>
+/* CSS simples para melhor compatibilidade com navegadores antigos */
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background:#050914; color:#eef5ff; font-family:Arial, Helvetica, sans-serif; }
+body { font-size:16px; line-height:1.5; }
+a { color:#65caff; text-decoration:none; }
+a:hover, a:focus { color:#fff; text-decoration:underline; }
+.wrap { width:94%; max-width:1120px; margin:0 auto; }
+.topline { background:#071b32; border-bottom:1px solid #123c61; color:#9fc9e8; font-size:12px; padding:7px 0; }
+.header { background:#081426; border-bottom:2px solid #087dcc; padding:18px 0; }
+.brand { font-size:27px; font-weight:bold; letter-spacing:1px; color:#fff; }
+.brand span { color:#00aaff; }
+.tagline { color:#91abc4; font-size:12px; margin-top:2px; }
+.nav { background:#0b1d33; border-bottom:1px solid #17466d; }
+.nav a { display:inline-block; padding:13px 15px; color:#dceeff; font-weight:bold; font-size:13px; }
+.nav a:hover, .nav a:focus { background:#087dcc; color:#fff; text-decoration:none; }
+.hero { margin:22px 0; padding:28px 26px; border:1px solid #14558a; background:#0a1c34; background-image:linear-gradient(120deg,#0b2543,#07101f); }
+.hero h1 { margin:0 0 8px; font-size:30px; line-height:1.2; }
+.hero h1 span { color:#19b8ff; }
+.hero p { color:#b8cde0; max-width:650px; margin:0 0 17px; }
+.button { display:inline-block; padding:10px 16px; margin:3px 5px 3px 0; background:#087dcc; border:1px solid #25b9ff; color:#fff; font-weight:bold; font-size:13px; }
+.button.secondary { background:#10263f; border-color:#285779; }
+.section-title { font-size:20px; margin:25px 0 12px; padding-left:11px; border-left:4px solid #08aaff; }
+.notice { background:#0b2038; border:1px solid #16466b; padding:12px 14px; color:#bfd6e9; margin:14px 0; font-size:13px; }
+.grid { font-size:0; margin:0 -7px; }
+.card { display:inline-block; vertical-align:top; width:calc(25% - 14px); margin:7px; padding:12px; background:#0b1729; border:1px solid #173653; font-size:14px; min-height:230px; }
+.cover { height:112px; background:#102c49; border:1px solid #1c5b87; text-align:center; color:#7dcfff; font-weight:bold; padding:34px 5px; font-size:17px; }
+.card h3 { margin:10px 0 4px; font-size:15px; color:#fff; }
+.card p { margin:4px 0 10px; color:#9fb6cc; font-size:12px; }
+.tag { display:inline-block; padding:3px 7px; background:#102f4c; color:#83d5ff; font-size:10px; margin-right:4px; }
+.panel { background:#09182a; border:1px solid #173653; padding:16px; margin:12px 0; }
+.panel h3 { margin:0 0 8px; color:#7bd4ff; }
+.searchbox { width:100%; max-width:420px; padding:11px; background:#06101d; border:1px solid #245273; color:#fff; font-size:14px; }
+.searchrow { margin:12px 0 16px; }
+.small { color:#91a9c0; font-size:12px; }
+.footer { margin-top:35px; padding:22px 0; background:#07111f; border-top:1px solid #173653; color:#8ca5bd; font-size:12px; }
+.hidden { display:none; }
+ul.clean { margin:8px 0; padding-left:20px; color:#b7cce0; }
+ul.clean li { margin:5px 0; }
+@media screen and (max-width:760px) {
+ .card { width:calc(50% - 14px); }
+ .brand { font-size:23px; }
+ .hero h1 { font-size:25px; }
+ .nav a { padding:11px 9px; font-size:12px; }
+}
+@media screen and (max-width:420px) {
+ .card { width:calc(100% - 14px); }
+ .hero { padding:20px 16px; }
+ .nav a { padding:10px 7px; font-size:11px; }
+}
+</style>
+<script type="text/javascript">
+function showPage(id) {
+ var pages = document.getElementsByClassName('page');
+ for (var i=0; i<pages.length; i++) { pages[i].style.display='none'; }
+ var target = document.getElementById(id);
+ if (target) { target.style.display='block'; }
+ window.scrollTo(0,0);
+ return false;
+}
+function filterGames() {
+ var field = document.getElementById('gameSearch');
+ var query = field ? field.value.toLowerCase() : '';
+ var cards = document.getElementsByClassName('game-card');
+ for (var i=0; i<cards.length; i++) {
+   var hay = cards[i].getAttribute('data-search').toLowerCase();
+   cards[i].style.display = (hay.indexOf(query) >= 0) ? 'inline-block' : 'none';
+ }
+}
+</script>
+</head>
+<body>
+<div class="topline"><div class="wrap">CENTRAL PLAYSTATION 3 &nbsp;|&nbsp; CATÁLOGO • TUTORIAIS • HEN</div></div>
+<div class="header"><div class="wrap">
+ <div class="brand">PS3 <span>STORE</span> GAMES</div>
+ <div class="tagline">SUA CENTRAL GAMER PARA PLAYSTATION 3</div>
+</div></div>
+<div class="nav"><div class="wrap">
+ <a href="#inicio" onclick="return showPage('inicio')">INÍCIO</a>
+ <a href="#jogos" onclick="return showPage('jogos')">JOGOS</a>
+ <a href="#hen" onclick="return showPage('hen')">GST HEN</a>
+ <a href="#tutoriais" onclick="return showPage('tutoriais')">TUTORIAIS</a>
+ <a href="#sobre" onclick="return showPage('sobre')">SOBRE</a>
+</div></div>
+
+<div class="wrap">
+<div id="inicio" class="page">
+ <div class="hero">
+  <h1>BEM-VINDO À <span>PS3 STORE GAMES</span></h1>
+  <p>Seu espaço dedicado ao PlayStation 3. Explore jogos, descubra conteúdos, consulte tutoriais e encontre informações úteis para cuidar do seu console.</p>
+  <a class="button" href="#jogos" onclick="return showPage('jogos')">EXPLORAR JOGOS</a>
+  <a class="button secondary" href="#hen" onclick="return showPage('hen')">CENTRAL GST HEN</a>
+ </div>
+ <div class="notice"><strong>Compatibilidade:</strong> este site foi feito com HTML, CSS e JavaScript básicos para evitar recursos modernos desnecessários. A compatibilidade final depende da versão do navegador do seu PS3 e será confirmada no teste real.</div>
+ <h2 class="section-title">DESTAQUES</h2>
+ <div class="grid">
+  <div class="card"><div class="cover">AÇÃO</div><h3>Jogos de ação</h3><p>Aventura, combate e grandes campanhas para seu PS3.</p><a href="#jogos" onclick="return showPage('jogos')">Ver catálogo »</a></div>
+  <div class="card"><div class="cover">CORRIDA</div><h3>Corrida e velocidade</h3><p>Confira títulos de corrida e automobilismo.</p><a href="#jogos" onclick="return showPage('jogos')">Ver catálogo »</a></div>
+  <div class="card"><div class="cover">HEN</div><h3>Central GST HEN</h3><p>Informações e orientações gerais sobre HEN.</p><a href="#hen" onclick="return showPage('hen')">Acessar »</a></div>
+  <div class="card"><div class="cover">GUIAS</div><h3>Tutoriais</h3><p>Dicas para navegação, configuração e manutenção.</p><a href="#tutoriais" onclick="return showPage('tutoriais')">Ler tutoriais »</a></div>
+ </div>
+ <h2 class="section-title">NOVIDADES</h2>
+ <div class="panel"><h3>Site em construção</h3><p>Esta é a primeira versão da loja. O catálogo e as páginas já estão preparados para receber capas, descrições e links autorizados.</p></div>
+</div>
+
+<div id="jogos" class="page" style="display:none">
+ <h2 class="section-title">CATÁLOGO DE JOGOS</h2>
+ <p class="small">Pesquise pelo nome ou gênero. Os títulos abaixo são exemplos de catálogo; não incluem arquivos de jogos.</p>
+ <div class="searchrow"><input class="searchbox" type="text" id="gameSearch" onkeyup="filterGames()" placeholder="Pesquisar jogo..." /></div>
+ <div class="grid" id="gameGrid">
+  <div class="card game-card" data-search="grand theft auto v gta ação mundo aberto"><div class="cover">GTA V</div><h3>Grand Theft Auto V</h3><p>Ação • Mundo aberto</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="the last of us aventura ação"><div class="cover">THE LAST OF US</div><h3>The Last of Us</h3><p>Aventura • Ação</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="god of war ascension ação aventura"><div class="cover">GOD OF WAR</div><h3>God of War: Ascension</h3><p>Ação • Aventura</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="gran turismo 6 corrida carros"><div class="cover">GT6</div><h3>Gran Turismo 6</h3><p>Corrida • Simulação</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="minecraft construção aventura"><div class="cover">MINECRAFT</div><h3>Minecraft</h3><p>Construção • Aventura</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="red dead redemption ação faroeste"><div class="cover">RED DEAD</div><h3>Red Dead Redemption</h3><p>Ação • Faroeste</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="need for speed most wanted corrida carros"><div class="cover">NFS MW</div><h3>Need for Speed: Most Wanted</h3><p>Corrida • Carros</p><span class="tag">PS3</span></div>
+  <div class="card game-card" data-search="mortal kombat luta combate"><div class="cover">MORTAL KOMBAT</div><h3>Mortal Kombat</h3><p>Luta • Combate</p><span class="tag">PS3</span></div>
+ </div>
+ <div class="notice">Dica: para adicionar jogos, edite os cards no arquivo index.html e troque os textos de exemplo. Use apenas links para conteúdos que você tem autorização para distribuir.</div>
+</div>
+
+<div id="hen" class="page" style="display:none">
+ <h2 class="section-title">CENTRAL GST HEN</h2>
+ <div class="hero"><h1>GST <span>HEN</span></h1><p>Área de informações e tutoriais para usuários de PlayStation 3. Leia as instruções com atenção antes de alterar configurações do console.</p></div>
+ <div class="panel"><h3>O que é HEN?</h3><p>HEN (Homebrew Enabler) permite executar determinados aplicativos homebrew em consoles compatíveis. A instalação e o uso variam conforme o modelo e a versão do sistema.</p></div>
+ <div class="panel"><h3>Antes de começar</h3><ul class="clean"><li>Confira o modelo do seu PS3 e a versão do sistema.</li><li>Faça backup dos dados importantes.</li><li>Leia instruções confiáveis e específicas para seu console.</li><li>Não desligue o console durante processos de instalação ou atualização.</li></ul></div>
+ <div class="notice">Esta página é informativa. Não há instalador ou arquivo de firmware incluído neste site.</div>
+</div>
+
+<div id="tutoriais" class="page" style="display:none">
+ <h2 class="section-title">TUTORIAIS</h2>
+ <div class="panel"><h3>Como navegar pelo site no PS3</h3><p>Use as setas do controle para percorrer os links. Pressione X para abrir. Use o botão voltar do navegador para retornar à página anterior.</p></div>
+ <div class="panel"><h3>Se o site não abrir corretamente</h3><ul class="clean"><li>Atualize a página.</li><li>Verifique se a conexão com a internet está funcionando.</li><li>Ative JavaScript nas configurações do navegador, se estiver desativado.</li><li>Se alguma parte não aparecer, informe qual página e o que aconteceu para podermos simplificar o código.</li></ul></div>
+ <div class="panel"><h3>Como limpar dados do navegador</h3><p>Nas ferramentas do navegador do PS3, procure as opções de apagar cache e cookies. Os nomes dos menus podem variar conforme o idioma e a versão do sistema.</p></div>
+</div>
+
+<div id="sobre" class="page" style="display:none">
+ <h2 class="section-title">SOBRE A PS3 STORE GAMES</h2>
+ <div class="panel"><h3>Uma loja feita para fãs de PS3</h3><p>A PS3 STORE GAMES é um projeto independente dedicado a organizar informações, catálogo e tutoriais para PlayStation 3.</p><p>Este projeto não é afiliado nem endossado pela Sony Interactive Entertainment.</p></div>
+ <div class="panel"><h3>Contato e redes</h3><p>Adicione aqui seus canais oficiais, e-mail ou comunidade quando estiverem prontos.</p></div>
+</div>
+</div>
+
+<div class="footer"><div class="wrap">
+ <strong>PS3 STORE GAMES</strong><br>
+ Projeto independente para PlayStation 3. Todas as marcas e nomes de jogos pertencem aos seus respectivos proprietários.<br>
+ <span class="small">Versão 1.0 • HTML clássico para máxima simplicidade</span>
+</div></div>
+</body>
+</html>
